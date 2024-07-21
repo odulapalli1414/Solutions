@@ -1,12 +1,18 @@
-def sol(nums, n):
-    res = []
-    for i in range(n):
-        res.append(nums[i])
-        res.append(nums[i+n])
+class Solution(object):
+    def shuffle(self, nums, n):
+        """
+        Shuffles the given list 'nums' into a new list where the first 'n' elements 
+        and the last 'n' elements are interleaved.
 
-    return res
+        :type nums: List[int]  # The list containing the elements to be shuffled.
+        :type n: int           # The integer representing the number of elements in each half.
+        :rtype: List[int]     # The shuffled list as the output.
+        """
+        res = []  # Initialize an empty list to store the shuffled result.
 
-nums = [2,5,1,3,4,7]
-n = 3
+        # Iterate through the first 'n' elements of 'nums'
+        for i in range(n):
+            res.append(nums[i])      # Add the i-th element from the first half of 'nums' to 'res'.
+            res.append(nums[i + n])  # Add the i-th element from the second half of 'nums' to 'res'.
 
-print(sol(nums, n))
+        return res  # Return the shuffled list.
