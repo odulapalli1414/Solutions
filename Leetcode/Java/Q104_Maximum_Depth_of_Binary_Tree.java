@@ -15,3 +15,4 @@ class Solution {
         return Math.max(leftMax, rightMax) + 1;
     }
 }
+
